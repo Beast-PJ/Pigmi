@@ -1,0 +1,101 @@
+/* Nav.css */
+
+:root {
+  --primary-color: #2f80ed;
+  --background: #fff;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --active-bg: #e7f0fd;
+  --border-color: #ddd;
+  --btn-bg: #27ae60;
+  --btn-hover-bg: #219150;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: var(--background);
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.05);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  align-items: center;
+  margin: 1rem 2rem;
+  user-select: none;
+}
+
+.nav-left {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.2rem 0.4rem;
+}
+
+.nav-left a {
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-left a:hover {
+  background-color: var(--active-bg);
+  color: var(--primary-color);
+}
+
+.nav-left a.active {
+  color: var(--primary-color);
+  font-weight: 700;
+  background-color: var(--active-bg);
+  box-shadow: inset 3px 0 0 var(--primary-color);
+  padding-left: 1rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.signed-in {
+  font-style: italic;
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logout-btn {
+  background-color: var(--btn-bg);
+  border: none;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.25s ease;
+}
+
+.logout-btn:hover {
+  background-color: var(--btn-hover-bg);
+}
